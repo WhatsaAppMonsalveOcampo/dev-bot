@@ -32,6 +32,7 @@ const ReceivedMessage = (req, res) => {
         res.send("EVENT_RECEIVED")
     } catch (e) {
         myConsole.log(e)
+        myConsole.log(messageObjet)
         res.send("EVENT_RECEIVED")
     }
 }
