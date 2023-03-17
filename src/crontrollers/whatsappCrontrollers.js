@@ -30,6 +30,7 @@ const ReceivedMessage = (req, res) => {
         var messages = messageObjet[0]
         // myConsole.log(messageObjet[0])
         myConsole.log(text)
+        console.log("sisas")
         var text = GetTextUser(messages)
 
         res.send("EVENT_RECEIVED")
