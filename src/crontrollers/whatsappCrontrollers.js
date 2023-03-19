@@ -27,11 +27,15 @@ const ReceivedMessage = (req, res) => {
         var changes = (entry["changes"])[0]
         var value = changes["value"]
         var messageObjet = value["messages"]
-        var messages = messageObjet[0]
-        // myConsole.log(messageObjet[0])
-        myConsole.log(text)
-        console.log("sisas")
-        var text = GetTextUser(messages)
+
+        // if(typeof messageObject != "undefined"){
+        //     var messages = messageObjet[0]
+        //     var text = GetTextUser(messages)
+        //     myConsole.log(text)
+        // }
+        myConsole.log(messageObjet)
+        console.log(messageObjet)
+        
 
         res.send("EVENT_RECEIVED")
     } catch (e) {
