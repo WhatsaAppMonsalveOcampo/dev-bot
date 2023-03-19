@@ -3,6 +3,7 @@ const myConsole = new console.Console(fs.createWriteStream("./logs.txt"))
 
 
 const VerifyToken = (req, res) => {
+    alert("hola mundo")
 
     try {
         var accessToken = "IYI4O6345H6IU45646"
