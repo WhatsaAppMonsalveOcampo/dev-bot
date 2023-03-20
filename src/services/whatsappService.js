@@ -3,13 +3,11 @@ const https = require("https")
 function SendMessageWhatsApp(textResponse, number){
     const data = JSON.stringify({
         "messaging_product": "whatsapp",    
-        "recipient_type": "individual",
         "to": number,
-        "type": "text",
         "text": {
-            "preview_url": false,
             "body": textResponse
-        }
+        },
+        "type": "text"
     })
     const options = {
         host: "graph.facebook.com",
@@ -18,7 +16,7 @@ function SendMessageWhatsApp(textResponse, number){
         body: data,
         headers: {
             "Content-Type": "application/json",
-            authorization: "Bearer EAANUCwxK6O0BAGZCtZCbc0x81u7vgjIKpRWpVpNeCmObTgMvIZBjO3ZBE6BiZCZBkN3wQYZCsOgBpGMITnZC7Yaak9ZCafNn6GSd5VrmViX02mnqrgIAAmZA5fyZBWqgygj1hK8fmt1vWBOf2jQRtZA1cngLq3LCcrCouEtntOJS42Y2C3PRJZA43pniZB"
+            Authorization: "Bearer EAANUCwxK6O0BAGZCtZCbc0x81u7vgjIKpRWpVpNeCmObTgMvIZBjO3ZBE6BiZCZBkN3wQYZCsOgBpGMITnZC7Yaak9ZCafNn6GSd5VrmViX02mnqrgIAAmZA5fyZBWqgygj1hK8fmt1vWBOf2jQRtZA1cngLq3LCcrCouEtntOJS42Y2C3PRJZA43pniZB"
         }
     }
     const req = https.request(options, res => {
