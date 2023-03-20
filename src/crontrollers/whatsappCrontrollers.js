@@ -1,5 +1,6 @@
 const fs = require("fs")
 const myConsole = new console.Console(fs.createWriteStream("./logs.txt"))
+const whatsappService = require("../services/whatsappService")
 
 
 const VerifyToken = (req, res) => {
@@ -30,8 +31,10 @@ const ReceivedMessage = (req, res) => {
 
         if(typeof messageObject != "undefined"){
             var messages = messageObjet[0]
+            var number = messages["from"]
             var text = GetTextUser(messages)
             myConsole.log(text)
+            whatsappService.SendMessageWhatsApp("El usuario dijo " + text, number)
         }
         
 
