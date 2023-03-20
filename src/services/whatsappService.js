@@ -16,7 +16,7 @@ function SendMessageWhatsApp(textResponse, number){
         path: "/v16.0/119667121068884/messages",
         method: "POST",
         body: data,
-        header: {
+        headers: {
             "Content-Type": "application/json",
             authorization: "Bearer EAANUCwxK6O0BAGZCtZCbc0x81u7vgjIKpRWpVpNeCmObTgMvIZBjO3ZBE6BiZCZBkN3wQYZCsOgBpGMITnZC7Yaak9ZCafNn6GSd5VrmViX02mnqrgIAAmZA5fyZBWqgygj1hK8fmt1vWBOf2jQRtZA1cngLq3LCcrCouEtntOJS42Y2C3PRJZA43pniZB"
         }
